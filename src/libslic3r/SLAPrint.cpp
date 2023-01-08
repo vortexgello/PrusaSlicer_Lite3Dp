@@ -519,7 +519,7 @@ SLAPrint::ApplyStatus SLAPrint::apply(const Model &model, DynamicPrintConfig con
 std::string SLAPrint::output_filename(const std::string &filename_base) const
 {
     DynamicConfig config = this->finished() ? this->print_statistics().config() : this->print_statistics().placeholders();
-    return this->PrintBase::output_filename(m_print_config.output_filename_format.value, ".sl1", filename_base, &config);
+    return this->PrintBase::output_filename(m_print_config.output_filename_format.value, ".zip", filename_base, &config);
 }
 
 std::string SLAPrint::validate(std::string*) const
